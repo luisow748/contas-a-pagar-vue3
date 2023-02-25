@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import {RouterLink, RouterView} from 'vue-router'
+import {RouterView} from 'vue-router'
 
-import HeaderView from "@/views/HeaderView2.vue";
-</script>
+import HeaderView from "@/views/HeaderView2.vue";</script>
 
 <template>
   <div class="flex-container">
@@ -15,8 +14,8 @@ import HeaderView from "@/views/HeaderView2.vue";
 
 
   </div>
-<!--    <RouterView/>-->
-<!--    <HeaderView/>-->
+  <!--    <RouterView/>-->
+  <!--    <HeaderView/>-->
 </template>
 
 <style scoped>
@@ -87,41 +86,5 @@ import HeaderView from "@/views/HeaderView2.vue";
 /*
 */
 
-
-.flex-container {
-
-  display: flex;
-
-  justify-content: center;
-  align-items: stretch;
-  /* flex-flow: column nowrap; */
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: stretch;
-
-  background-color: transparent;
-  height: 100%;
-  padding: 15px;
-  gap: 5px;
-
-}
-
-.flex-container > div{
-  background: transparent;
-  /*border: 3px solid #ffcc80;*/
-  /*border-radius: 5px;*/
-  padding: 8px;
-}
-
-
-.item1 {
-  /* flex:1 1 auto; */
-  flex-grow:1;
-}
-
-.item2 {
-  /* flex:1 1 auto; */
-  flex-grow:1;
-}
 
 </style>

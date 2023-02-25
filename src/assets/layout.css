@@ -1,0 +1,36 @@
+.flex-container {
+
+    display: flex;
+    /*border: 1px solid #b2b2ff;*/
+    justify-content: center;
+    align-items: stretch;
+    /* flex-flow: column nowrap; */
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: stretch;
+
+    background-color: transparent;
+    height: 100%;
+    /*padding: 15px;*/
+    /*gap: 5px;*/
+
+}
+
+.flex-container > div{
+    /*background: transparent;*/
+    /*border: 1px solid #baeaac;*/
+    /*!*border-radius: 5px;*!*/
+    /*padding: 8px;*/
+}
+
+
+.item1 {
+    /* flex:1 1 auto; */
+    flex-grow:1;
+}
+
+.item2 {
+    /* flex:1 1 auto; */
+    flex-grow:1;
+    min-height: 100vh;
+}

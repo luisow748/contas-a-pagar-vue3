@@ -1,10 +1,11 @@
 @import './base.css';
+@import "layout.css";
+@import "sections.css";
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
-
+  /*padding: 1rem;*/
   font-weight: normal;
 }
 
@@ -23,15 +24,16 @@ a,
 
 @media (min-width: 1024px) {
   body {
-    display: flex;
-    place-items: self-start;
-    color: #181818;
+    /*display: flex;*/
+    /*place-items: start;*/
+    color: #e3e3e3;
+    background: #252c35;
   }
 
   #app {
-    display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr;*/
-    grid-template-rows: max-content;
-    padding: 0 1rem;
+    /*display: grid;*/
+    /*!*grid-template-columns: 1fr 1fr 1fr;*!*/
+    /*grid-template-rows: max-content;*/
+    /*padding: 0 1rem;*/
   }
 }

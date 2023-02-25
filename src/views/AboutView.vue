@@ -8,14 +8,8 @@
 @media (min-width: 1024px) {
   .about {
     min-height: 100vh;
-    display: flex;
-    align-items: start;
-  }
-  .header {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-    margin-top: 0;
+    /*display: flex;*/
+    /*align-items: start;*/
   }
 }
 </style>

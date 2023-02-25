@@ -1,5 +1,6 @@
 <template>
   <main>
+    <div class="main-container">
     <h1 class="title">Minhas contas</h1>
 
     <div class="">
@@ -39,7 +40,7 @@
 
     </div>
 
-
+    </div>
   </main>
 </template>
 

@@ -5,9 +5,9 @@ defineProps<{
 </script>
 
 <template>
-  <div class="greetings">
-    <h3 class="green">{{ msg }}</h3>
-
+  <div class="d-flex justify-content-start">
+    <h3 class="">{{ msg }}</h3>
+<!--    <Logo />-->
   </div>
 </template>
 
@@ -19,12 +19,13 @@ h1 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .greetings h1,
 .greetings h3 {
   text-align: left;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 1024px) {

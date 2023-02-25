@@ -1,12 +1,24 @@
 <template>
   <div class="header">
 
-    <div>
-      <Title :msg="AppSettings.APP_NAME"/>
-      <nav>
-        <RouterLink :to="menu.HEADER.index.url">{{ menu.HEADER.index.label }}</RouterLink>
-        <RouterLink :to="menu.HEADER.contas.url">{{ menu.HEADER.contas.label }}</RouterLink>
-      </nav>
+    <div class="d-flex flex-row">
+      <div class="d-flex justify-content-start">
+        <h3 class="">Contas a pagar</h3>
+        <!--    <Logo />-->
+
+<!--      <Title :msg="AppSettings.APP_NAME"/>-->
+<!--      <nav class="menu-header-container">-->
+      </div>
+        <div class="d-flex justify-content-center">
+          <RouterLink class="menu-header-item button-30" :to="menu.HEADER.index.url">{{ menu.HEADER.index.label }}</RouterLink>
+          <RouterLink class="menu-header-item button-30" :to="menu.HEADER.contas.url">{{ menu.HEADER.contas.label }}</RouterLink>
+          <RouterLink class="menu-header-item button-30" :to="menu.HEADER.parcelas.url">{{ menu.HEADER.parcelas.label }}</RouterLink>
+          <RouterLink class="menu-header-item button-30" :to="menu.HEADER.config.url">{{ menu.HEADER.config.label }}</RouterLink>
+<!--          <button class="button-30" role="button">Button 30</button>-->
+        </div>
+
+<!--      </nav>-->
+
     </div>
 
   </div>

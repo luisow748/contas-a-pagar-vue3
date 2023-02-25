@@ -10,6 +10,14 @@ export class menu {
         contas: {
             url: '/contas',
             label: 'Contas',
+        },
+        parcelas: {
+            url: '/parcelas',
+            label: 'Parcelas',
+        },
+        config: {
+            url: '/config',
+            label: 'Configuração',
         }
 
     }

@@ -1,70 +1,64 @@
 <template>
   <main>
-    <div class="main-container">
-    <h1 class="title">Minhas contas</h1>
+    <div class="main-container ">
+      <h5 class="">Minhas contas:</h5>
 
-    <div class="">
+      <div class="">
 
-      <p class="category">Por mês:</p>
-      <MonthsMenu
-          @get-accounts-by-month="getAccountsByMonth"
-          @refresh-account-list="refreshAccountList"/>
+        <!--        <p class="category">Por mês:</p>-->
+        <MonthsMenu
+            @get-accounts-by-month="getAccountsByMonth"
+            @refresh-account-list="refreshAccountList"/>
 
-      <h3 class="title">Registros:</h3>
+        <!--      <h3 class="">Registros:</h3>-->
+        <div class="table-accounts shadow-lg bg-body rounded table-bordered">
+          <table class="table table-dark table-striped ">
+            <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">Valor total</th>
+              <th scope="col">Vencimento</th>
+              <th scope="col">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="acc in accounts" :key="acc.id">
+              <th scope="row">{{ acc.id }}</th>
+              <td v-if="acc.name"></td>
+              <td v-else>Conta nº {{ acc.id }}</td>
+              <td>{{ acc.totalValue }}</td>
+              <td>{{ formatDate(acc) }}</td>
+              <td>
+                <button type="button" class="btn btn-outline-danger" size="sm" @click="deleteAccount(acc.id)">
+                  Excluir
+                </button>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <table class="table table-dark table-striped ">
-        <thead>
-        <tr>
-          <th scope="col">ID</th>
-          <th scope="col">Nome</th>
-          <th scope="col">Valor total</th>
-          <th scope="col">Vencimento</th>
-          <th scope="col">Ações</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr v-for="acc in accounts" :key="acc.id">
-          <th scope="row">{{ acc.id }}</th>
-          <td v-if="acc.name"></td>
-          <td v-else>Conta nº {{ acc.id }}</td>
-          <td>{{ acc.totalValue }}</td>
-          <td>{{ formatDate(acc) }}</td>
-          <td>
-            <button type="button" class="btn btn-outline-danger" size="sm" @click="deleteAccount(acc.id)">
-              Excluir
-            </button>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      </div>
+
 
     </div>
 
-    </div>
   </main>
 </template>
 
 <script>
-// import {Button, Card, FormGroupInput, TabPane, Tabs} from '@/components';
 import AccountApi from '@/base/api/account-api'
 import MonthsMenu from "@/views/menu/MonthsMenu.vue";
 import DateService from '@/base/services/date-service'
-// import NavLink from "@/components/Navbar/NavLink.vue";
-// import NButton from "@/components/Button.vue";
+import MonthsCarousel from "@/views/menu/MonthsCarousel.vue";
+
 export default {
 
   name: 'AccountsView',
   bodyClass: 'landing-page',
   components: {
-    // NButton,
-    // NavLink,
-    // Card,
-    // Tabs,
-    // TabPane,
-    // [Button.name]: Button,
-    // [FormGroupInput.name]: FormGroupInput,
-    // [Select.name]: Select,
-    // [Option.name]: Option,
+    MonthsCarousel,
     MonthsMenu,
     DateService
   },

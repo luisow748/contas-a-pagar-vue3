@@ -2,6 +2,7 @@
 @import "layout.css";
 @import "sections.css";
 @import "logo.css";
+@import "buttons.css";
 
 #app {
   max-width: 1460px;

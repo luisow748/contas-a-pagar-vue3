@@ -1,8 +1,14 @@
 export default {
     formatDate(account) {
-        return account.expirationDay + "/" +
-            account.expirationMonth + "/" +
-            account.expirationYear.replace('20', '');
+        if(account.expirationYear != null){
+            return account.expirationDay + "/" +
+                account.expirationMonth + "/" +
+                account.expirationYear.replace('20', '');
+        }else {
+            return ""
+        }
+
+
     },
     getMonths() {
         return [

@@ -12,7 +12,7 @@ export class menu {
             label: 'Contas',
         },
         newaccount: {
-            url: '/newaccount',
+            url: '/account/new',
             name: 'newaccount',
             label: 'Nova',
         },
@@ -30,6 +30,11 @@ export class menu {
             url: '/report',
             name: 'report',
             label: 'Relatórios',
+        },
+        newreport: {
+            url: '/report/new',
+            name: 'newreport',
+            label: 'Novo',
         },
         config: {
             url: '/config',

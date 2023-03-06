@@ -3,6 +3,8 @@
 @import "sections.css";
 @import "logo.css";
 @import "buttons.css";
+@import "form.css";
+
 
 #app {
   max-width: 1460px;

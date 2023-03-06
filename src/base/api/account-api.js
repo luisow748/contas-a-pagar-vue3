@@ -1,12 +1,12 @@
 import axios from "axios";
 
 export const accountApi = axios.create({
-    baseURL: "http://localhost:8082/api"
+    baseURL: "http://localhost:8082/api", timeout: 1000
 });
 const accountApiName = "account"
 export default {
     getAccounts() {
-        return accountApi.get(`/${accountApiName}`)
+        return accountApi.get(`/${accountApiName}`, {errorHandle: false})
             .then((res) => {
                 return res.data
             });

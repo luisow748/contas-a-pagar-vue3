@@ -12,8 +12,8 @@
         </RouterLink>
       </li>
       <li>
-        <RouterLink class="dropdown-item" data-bs-auto-close="true" :to="menu.HEADER.newaccount.url">
-          {{ menu.HEADER.newaccount.label }}
+        <RouterLink class="dropdown-item" data-bs-auto-close="true" :to="menu.HEADER.newreport.url">
+          {{ menu.HEADER.newreport.label }}
         </RouterLink>
       </li>
       <li>

@@ -66,6 +66,8 @@ a,
     transform: translateY(2px);
 }
 
+
+
 .header{
     background: #4a4a4a;
     /*padding: 10px;*/
@@ -83,6 +85,7 @@ main {
     flex-grow:1;
 }
 .main-container {
+    margin: 10px;
     flex-grow:1;
 }
 

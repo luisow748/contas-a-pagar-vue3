@@ -102,15 +102,18 @@ export default {
       AccountApi.saveRegister(this.form).then(
           (acc) => {
             this.register = acc
+            console.log(AccountApi)
             router.push('/account')
           }
       ).catch((err) => {
             console.log(err)
+        console.log(AccountApi)
             this.result = true
             this.resultMessage = err
           }
       ).finally(() => {
         this.result = true
+        console.log(AccountApi)
         // this.resultMessage = err.response
       })
     }

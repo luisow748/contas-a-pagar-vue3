@@ -1,5 +1,11 @@
 export class menu {
     public static HEADER = {
+        login: {
+            url: '/login',
+            name: 'login',
+            label: 'Login',
+
+        },
         index: {
             url: '/',
             name: 'home',

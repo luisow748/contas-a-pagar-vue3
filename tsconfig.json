@@ -1,4 +1,7 @@
 {
+  "module": "ESNext",
+  "target": "esnext",
+
   "extends": "@vue/tsconfig/tsconfig.web.json",
   "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "components.d.ts"],
   "compilerOptions": {

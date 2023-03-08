@@ -2,15 +2,10 @@
   <main>
     <div class="main-container ">
       <h5 class="">Minhas contas:</h5>
-
       <div class="">
-
-        <!--        <p class="category">Por mês:</p>-->
         <MonthsMenu
             @get-accounts-by-month="getAccountsByMonth"
             @refresh-account-list="refreshAccountList"/>
-
-        <!--      <h3 class="">Registros:</h3>-->
         <div class="table-accounts shadow-lg bg-body rounded table-bordered">
           <table class="table table-dark table-striped ">
             <thead>
@@ -38,20 +33,16 @@
             </tbody>
           </table>
         </div>
-
       </div>
-
-
     </div>
-
   </main>
 </template>
-
 <script>
 import AccountApi from '@/base/api/account-api'
 import MonthsMenu from "@/views/menu/MonthsMenu.vue";
 import DateService from '@/base/services/date-service'
 import MonthsCarousel from "@/views/menu/MonthsCarousel.vue";
+import router from "@/router";
 
 export default {
 
@@ -83,14 +74,17 @@ export default {
   methods: {
     refreshAccountList() {
       this.getMonths()
-      console.log("Refresh")
       this.selectedMonth = 13
       AccountApi.getAccounts().then(
           (acc) => {
             this.accounts = acc
-            console.log(acc)
+            console.log(acc.code)
           }
-      )
+      ).catch( (err) => {
+        console.log(err.status)
+        console.log(err.response.status)
+        router.push('/login')
+      })
     },
     formatDate(account) {
       return DateService.formatDate(account)

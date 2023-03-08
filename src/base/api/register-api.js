@@ -1,18 +1,15 @@
-import axios from "axios";
+import apiBase from "@/base/api/Api";
 
-export const accountApi = axios.create({
-    baseURL: "http://localhost:8082/api"
-});
 const registerApiName = "/register"
 export default {
-    getRegisters() {
-        return accountApi.get(registerApiName)
+    saveRegister(register) {
+        return apiBase.post(registerApiName, register)
             .then((res) => {
                 return res.data
             });
     },
-    saveRegister(register) {
-        return accountApi.post(registerApiName, register)
+    getRegisters() {
+        return apiBase.get(registerApiName)
             .then((res) => {
                 return res.data
             });

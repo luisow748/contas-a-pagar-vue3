@@ -2,10 +2,16 @@ import {createRouter, createWebHistory} from 'vue-router'
 import AccountsView from "@/views/account/AccountsView.vue";
 import {menu} from "@/util/menu/MenuList";
 import NewAccountView from "@/views/account/NewAccountView.vue";
+import LoginView from "@/views/auth/LoginView.vue";
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),
     routes: [
+        {
+            path: menu.HEADER.login.url,
+            name: menu.HEADER.login.name,
+            component: LoginView
+        },
         {
             path: menu.HEADER.index.url,
             name: menu.HEADER.index.name,

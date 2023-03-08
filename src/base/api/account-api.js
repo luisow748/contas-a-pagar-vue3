@@ -1,19 +1,16 @@
-import axios from "axios";
+import apiBase from "@/base/api/Api";
 
-export const accountApi = axios.create({
-    baseURL: "http://localhost:8082/api", timeout: 1000
-});
 const accountApiName = "account"
 export default {
     getAccounts() {
-        return accountApi.get(`/${accountApiName}`, {errorHandle: false})
+        return apiBase.get(`/${accountApiName}`)
             .then((res) => {
                 return res.data
             });
     },
     getAccountsByMonth(monthId) {
         let url = `/${accountApiName}/year/`  + new Date().getFullYear() + "/month/" + monthId
-        return accountApi.get(url)
+        return apiBase.get(url)
             .then((res) => {
                 return res.data
             });
@@ -21,7 +18,7 @@ export default {
     saveRegister(account) {
         let installmentValue = Number(account.installmentValue).toFixed(2);
         let totalValue = Number(account.totalValue).toFixed(2);
-        return accountApi.post(accountApiName, {
+        return apiBase.post(accountApiName, {
             name: account.name,
             status: null,
             totalValue: totalValue,
@@ -33,7 +30,7 @@ export default {
             });
     },
     deleteRegister(id) {
-        return accountApi.delete(`${accountApiName}/${id}`)
+        return apiBase.delete(`${accountApiName}/${id}`)
             .then((res) => {
                 return res.data
             });

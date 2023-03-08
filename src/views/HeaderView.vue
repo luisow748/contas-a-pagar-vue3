@@ -7,7 +7,7 @@
 
       <nav>
         <RouterLink :to="menu.HEADER.index.url">{{menu.HEADER.index.label}}</RouterLink>
-        <RouterLink :to="menu.HEADER.contas.url">{{menu.HEADER.contas.label}}</RouterLink>
+        <RouterLink :to="menu.HEADER.account.url">{{ menu.HEADER.account.label }}</RouterLink>
       </nav>
     </div>
   </header>
@@ -45,11 +45,11 @@ nav {
   margin-top: 0;
 }
 
-nav a.router-link-exact-active {
+nav a {
   color: var(--color-text);
 }
 
-nav a.router-link-exact-active:hover {
+nav a:hover {
   background-color: transparent;
 }
 
@@ -70,9 +70,6 @@ nav a:first-of-type {
     padding-right: calc(var(--section-gap) / 2);
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
 
   header .wrapper {
     display: flex;

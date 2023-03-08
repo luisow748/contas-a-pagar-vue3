@@ -8,7 +8,7 @@ import HeaderView from "@/views/HeaderView2.vue";</script>
     <div class="item1">
       <HeaderView/>
     </div>
-    <div class="item2">
+    <div class="item2 ">
       <RouterView/>
     </div>
 

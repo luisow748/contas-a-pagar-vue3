@@ -1,0 +1,29 @@
+.form-newaccount{
+   margin-bottom: 20px;
+
+}
+
+
+div .form-newaccount input{
+    background: #dfdfdf;
+}
+
+div .form-newaccount input:focus{
+    background: #1e3046;
+    color: white;
+}
+
+.send-button {
+    background: #cbcbcb;
+    border: 1px solid #547c8e;
+    width: 100px;
+    border-radius: 5px;
+}
+.send-button:hover {
+    /*background: #306d84;*/
+    background: #cfcfcf;
+    border: 1px solid #06b0fc;
+    width: 100px;
+    border-radius: 5px;
+    color: black;
+}

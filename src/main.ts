@@ -10,14 +10,12 @@ import "bootstrap"
 import './assets/main.css'
 // import { BootstrapVue, IconsPlugin } from 'bootstrap-vue';
 
+import { VueCookieNext } from 'vue-cookie-next'
 
 const app = createApp(App)
-
+app.use(VueCookieNext)
 app.use(createPinia())
 app.use(router)
-// // @ts-ignore
-// app.use(BootstrapVue);
-// // @ts-ignore
-// app.use(IconsPlugin)
+VueCookieNext.config({ expire: '1d' , sameSite: ""})
 
 app.mount('#app')
